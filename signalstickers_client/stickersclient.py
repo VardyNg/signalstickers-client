@@ -39,7 +39,7 @@ class StickersClient:
         self.signal_pass = signal_pass
 
     async def __aenter__(self) -> 'StickersClient':
-        self.http = await httpx.AsyncClient(verify=CACERT_PATH).__aenter__()
+        self.http = await httpx.AsyncClient(verify=false).__aenter__()
         return self
 
     async def __aexit__(self, *excinfo):
